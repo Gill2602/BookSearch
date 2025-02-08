@@ -1,0 +1,21 @@
+@startuml Backend Book Search
+
+start
+
+:User inserisce L'ISBN;
+
+:Formattazione ISBN;
+
+:Richiesta GET API "Google Books APIs";
+
+if (Controllo validita della risposta) then (valido)
+    :Estrarre e analizzare i dati interessati;
+
+    :Restituire i dati al frontend;
+else (non valido)
+    :Restituire un errore nel frontend;
+endif
+
+end
+
+@enduml
